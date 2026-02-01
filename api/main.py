@@ -132,3 +132,6 @@ async def chat_coach(req: ChatRequest):
         return {"text": response.text}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+export_app = app
