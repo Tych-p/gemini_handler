@@ -1,27 +1,5 @@
 ﻿{
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/status",
-      "dest": "api/index.py"
-    },
-    {
-      "src": "/analyze-image",
-      "dest": "api/index.py"
-    },
-    {
-      "src": "/analyze-audio",
-      "dest": "api/index.py"
-    },
-    {
-      "src": "/chat-coach",
-      "dest": "api/index.py"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.py" }
   ]
 }
