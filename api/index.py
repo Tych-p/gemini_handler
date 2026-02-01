@@ -134,4 +134,12 @@ async def chat_coach(req: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.get("/status")
+async def status():
+    return {
+        "status": "ok",
+        "api_key_configured": os.environ.get("GEMINI_API_KEY") is not None,
+        "runtime": "vercel-serverless"
+    }
+
 export_app = app

@@ -8,7 +8,19 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/status",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/analyze-image",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/analyze-audio",
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/chat-coach",
       "dest": "api/index.py"
     }
   ]
